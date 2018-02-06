@@ -1,13 +1,12 @@
-#The COPYRIGHT file at the top level of #this repository contains the full
-#copyright notices and license terms.
+# The COPYRIGHT file at the top level of #this repository contains the full
+# copyright notices and license terms.
 
-from trytond.pool import PoolMeta, Pool
-from trytond.model import Model, fields
+from trytond.pool import PoolMeta
 
 __all__ = ['PriceList']
 
 
-class PriceList(Model):
+class PriceList:
     __metaclass__ = PoolMeta
     __name__ = 'product.price_list'
 
@@ -17,5 +16,5 @@ class PriceList(Model):
         '''
         context = super(PriceList, self).get_context_formula(party,
             product, unit_price, quantity, uom)
-        context['rebate'] = party.rebate if party else 0
+        context['names']['rebate'] = party.rebate if party else 0
         return context

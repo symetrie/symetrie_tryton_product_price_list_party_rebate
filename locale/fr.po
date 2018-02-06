@@ -1,0 +1,11 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.party,rebate:"
+msgid "Rebate"
+msgstr "Remise"
+
+msgctxt "help:party.party,rebate:"
+msgid "Rebate negotiated: percentage expressed by a number between 0 and 100"
+msgstr "Remise négociée:  pourcentage exprimé par un nombre entre 0 et 100"

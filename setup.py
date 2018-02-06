@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-#This file is part of Tryton.  The COPYRIGHT file at the top level of
-#this repository contains the full copyright notices and license terms.
+# This file is part of Tryton.  The COPYRIGHT file at the top level of
+# this repository contains the full copyright notices and license terms.
 
 from setuptools import setup
 import re
@@ -33,7 +33,7 @@ info = dict(config.items('tryton'))
 for key in ('depends', 'extras_depend', 'xml'):
     if key in info:
         info[key] = info[key].strip().splitlines()
-version = info.get('version', '0.0.2')
+version = info.get('version', '0.0.1')
 major_version, minor_version, _ = version.split('.', 2)
 major_version = int(major_version)
 minor_version = int(minor_version)
@@ -71,7 +71,7 @@ setup(name=name,
     package_dir={'trytond.modules.product_price_list_party_rebate': '.'},
     packages=[
         'trytond.modules.product_price_list_party_rebate',
-#        'trytond.modules.product_price_list_party_rebate.tests',
+        'trytond.modules.product_price_list_party_rebate.tests',
         ],
     package_data={
         'trytond.modules.product_price_list_party_rebate': (info.get('xml', [])
@@ -86,26 +86,13 @@ setup(name=name,
         'Intended Audience :: Financial and Insurance Industry',
         'Intended Audience :: Legal Industry',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
-#        'Natural Language :: Bulgarian',
-#        'Natural Language :: Catalan',
-#        'Natural Language :: Chinese (Simplified)',
-#        'Natural Language :: Czech',
-#        'Natural Language :: Dutch',
         'Natural Language :: English',
         'Natural Language :: French',
-#        'Natural Language :: German',
-#        'Natural Language :: Hungarian',
-#        'Natural Language :: Italian',
-#        'Natural Language :: Polish',
-#        'Natural Language :: Portuguese (Brazilian)',
-#        'Natural Language :: Russian',
-#        'Natural Language :: Slovenian',
-#        'Natural Language :: Spanish',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Office/Business',
@@ -123,4 +110,3 @@ setup(name=name,
     tests_require=tests_require,
     use_2to3=True,
     )
-

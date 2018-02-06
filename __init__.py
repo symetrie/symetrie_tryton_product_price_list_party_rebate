@@ -12,4 +12,4 @@ def register():
     Pool.register(
         product.PriceList,
         party.Party,
-        module='symetrie_product_price_list_party_rebate', type_='model')
+        module='product_price_list_party_rebate', type_='model')
