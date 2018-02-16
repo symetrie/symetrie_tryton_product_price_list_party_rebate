@@ -1,5 +1,6 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
+from decimal import Decimal
 
 from trytond.pool import PoolMeta
 from trytond.model import fields
@@ -18,3 +19,7 @@ class Party:
             ],
         help='Rebate negotiated: percentage expressed '
         'by a number between 0 and 100')
+
+    @classmethod
+    def default_rebate(cls):
+        return Decimal(0)
