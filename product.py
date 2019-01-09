@@ -6,15 +6,15 @@ from trytond.pool import PoolMeta
 __all__ = ['PriceList']
 
 
-class PriceList:
-    __metaclass__ = PoolMeta
+class PriceList(metaclass=PoolMeta):
     __name__ = 'product.price_list'
 
-    def get_context_formula(self, party, product, unit_price, quantity, uom):
+    def get_context_formula(self, party, product, unit_price, quantity, uom,
+            pattern=None):
         '''
         Override get_context_formula to add rebate to evaluation context
         '''
         context = super(PriceList, self).get_context_formula(party,
-            product, unit_price, quantity, uom)
+            product, unit_price, quantity, uom, pattern)
         context['names']['rebate'] = party.rebate if party else 0
         return context
