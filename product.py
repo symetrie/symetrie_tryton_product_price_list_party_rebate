@@ -7,7 +7,6 @@ __all__ = ['PriceList']
 
 
 class PriceList:
-    __metaclass__ = PoolMeta
     __name__ = 'product.price_list'
 
     def get_context_formula(self, party, product, unit_price, quantity, uom):
