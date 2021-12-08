@@ -6,7 +6,7 @@ from trytond.pool import PoolMeta
 __all__ = ['PriceList']
 
 
-class PriceList:
+class PriceList(metaclass=PoolMeta):
     __name__ = 'product.price_list'
 
     def get_context_formula(self, party, product, unit_price, quantity, uom):

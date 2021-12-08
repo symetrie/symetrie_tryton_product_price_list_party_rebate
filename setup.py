@@ -38,7 +38,7 @@ version = info.get('version', '0.0.1')
 major_version, minor_version, _ = version.split('.', 2)
 major_version = int(major_version)
 minor_version = int(minor_version)
-name = 'symetrie_product_price_list_party_rebate'
+name = 'product_price_list_party_rebate'
 
 download_url = 'http://downloads.tryton.org/%s.%s/' % (
     major_version, minor_version)
@@ -76,8 +76,8 @@ if minor_version % 2:
 
 setup(name=name,
     version=version,
-    description='bare new files',
-    long_description=read('README.rst'),
+    description='product price list party rebate',
+    long_description=read('README'),
     author='Symétrie',
     author_email='jc.michel@symetrie.com',
     url='https://symetrie.com',

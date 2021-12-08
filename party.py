@@ -8,7 +8,7 @@ from trytond.model import fields
 __all__ = ['Party']
 
 
-class Party:
+class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
 
     rebate = fields.Numeric('Rebate', digits=(16, 2),
